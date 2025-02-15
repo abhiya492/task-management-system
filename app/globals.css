@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Theme Variables */
+:root {
+  --primary-color: #2563eb; /* Tailwind blue-600 */
+  --secondary-color: #f3f4f6; /* Tailwind gray-100 */
+  --text-color: #1f2937; /* Tailwind gray-800 */
+  --background-color: #ffffff; /* White */
+  --border-color: #e5e7eb; /* Tailwind gray-300 */
+  --font-family: 'Inter', sans-serif;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #1d4ed8; /* Darker blue */
+    --secondary-color: #374151; /* Tailwind gray-700 */
+    --text-color: #f9fafb; /* Tailwind gray-50 */
+    --background-color: #111827; /* Tailwind gray-900 */
+    --border-color: #374151; /* Tailwind gray-700 */
+  }
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Card Component */
+.card {
+  background: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #1e40af; /* Darker Blue */
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+}
+
+/* Task List */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Task Item */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+/* Responsive Typography */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: semi-bold;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: medium;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

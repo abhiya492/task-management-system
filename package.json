@@ -9,19 +9,42 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.7.4",
+    "@heroicons/react": "^2.2.0",
+    "@hookform/resolvers": "^4.1.0",
+    "@tanstack/react-query": "^5.66.0",
+    "@types/date-fns": "^2.5.3",
+    "@types/jsonwebtoken": "^9.0.8",
+    "bcryptjs": "^3.0.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
+    "jsonwebtoken": "^9.0.2",
+    "next": "15.1.7",
+    "next-auth": "^4.24.11",
+    "pg": "^8.13.3",
+    "postgres": "^3.4.5",
     "react": "^19.0.0",
+    "react-big-calendar": "^1.17.1",
     "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "react-hook-form": "^7.54.2",
+    "react-icons": "^5.4.0",
+    "zod": "^3.24.2",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^20",
     "@types/react": "^19",
+    "@types/react-big-calendar": "^1.16.1",
     "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "drizzle-kit": "^0.30.4",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
