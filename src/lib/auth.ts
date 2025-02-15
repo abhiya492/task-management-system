@@ -1,11 +1,10 @@
-//src/lib/auth.ts
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { db } from "@/db";
 import { users } from "@/db/schema"; // Import your users table
 import { eq } from "drizzle-orm";
 import bcrypt from "bcryptjs"; // For password hashing
-//import jwt from "jsonwebtoken"; // For JWT tokens
+import { signOut as nextAuthSignOut } from "next-auth/react"; // Import signOut function from next-auth/react
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -66,3 +65,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   secret: process.env.NEXTAUTH_SECRET, // Add a secret for NextAuth
 });
+
+export { nextAuthSignOut as signOut }; // Export signOut function

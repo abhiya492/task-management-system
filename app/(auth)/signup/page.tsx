@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { signIn } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FaGoogle, FaGithub } from "react-icons/fa";
@@ -176,6 +176,15 @@ export default function LoginPage() {
           >
             Sign up
           </Link>
+        </div>
+
+        <div className="text-center text-sm text-gray-600 dark:text-gray-300 mt-4">
+          <button
+            onClick={() => signOut()}
+            className="font-medium text-blue-600 hover:text-blue-500"
+          >
+            Sign out
+          </button>
         </div>
       </div>
     </div>
